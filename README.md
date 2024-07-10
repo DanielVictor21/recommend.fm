@@ -34,26 +34,30 @@ So, all the skills used in this projects compiled were:
 Now, lets see how it works!
 
 ### Home Page
-![image](https://github.com/DanielVictor21/Recommend.FM/assets/109745831/296042d3-4617-4c22-9cf2-9679b6529130)
+![image](https://github.com/DanielVictor21/recommend.fm/assets/109745831/5f04f2fe-3567-4d5a-aa88-be7d3de2515e)
+
 
 
 
 
 ### Unique Username Recommendation
-![image](https://github.com/DanielVictor21/Recommend.FM/assets/109745831/4e082c79-ec5e-4bfb-91bf-d0cfa38cf7ad)
+![image](https://github.com/DanielVictor21/recommend.fm/assets/109745831/2c5a87c0-8f98-4ef3-afd5-05cacc279db3)
+
 
 
 
 
 ### Double Page Recommendation
-![image](https://github.com/DanielVictor21/Recommend.FM/assets/109745831/c370ca4e-3aa4-4b4c-bf9a-3db0805ca00f)
+![image](https://github.com/DanielVictor21/recommend.fm/assets/109745831/378e03f1-59da-4b78-88a0-8e8a2836ad80)
+
 
 
 
 
 
 ### Double Username Recommendation
-![image](https://github.com/DanielVictor21/Recommend.FM/assets/109745831/618a5d8e-a22d-429b-b194-20bbe240bdda)
+![image](https://github.com/DanielVictor21/recommend.fm/assets/109745831/64fdaa6b-08b2-47c0-b09a-d49f3149f71d)
+
 
 
 And an about page, but i want you to visit the site to see! So, to run the local application, follow these steps
