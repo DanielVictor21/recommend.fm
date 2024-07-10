@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recommend.FM</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <style>
+    @media (min-width: 992px) { /* Aplicar somente em telas maiores */
+    .custom-div {
+        position: relative;
+        top: -82px; /* Ajuste este valor conforme necessário */
+    }
+    #sendbutton{
+        position: relative;
+        top: 5px;
+    }
+    #container {
+            position: relative;
+            width: 300px;
+            height: 300px;
+            margin: auto;
+        }
+        #container img {
+            position: absolute;
+            width: 180px;
+            height: 180px;
+            transition: transform 0.5s ease-in-out, z-index 0.3s;
+        }
+        #container img:nth-child(1) { top: 0; left: 0; }
+        #container img:nth-child(2) { top: 0; left: 180px; }
+        #container img:nth-child(3) { top: 0; left: 360px; }
+        #container img:nth-child(4) { top: 180px; left: 0; }
+        #container img:nth-child(5) { top: 180px; left: 180px; }
+        #container img:nth-child(6) { top: 180px; left: 360px; }
+        #container img:nth-child(7) { top: 360px; left: 0; }
+        #container img:nth-child(8) { top: 360px; left: 180px; }
+        #container img:nth-child(9) { top: 360px; left: 360px; }
+        #container img:hover {
+            transform: scale(1.2);
+            z-index: 10;
+        }
+        #bottom{
+          margin-top: 320px;
+        }
+      }
+      @media (max-width: 991.98px) {
+    .custom-div {
+        position: static;
+        top: 0;
+    }
+    #sendbutton {
+        position: relative;
+        top: 5px;
+    }
+    #container {
+        position: relative;
+        width: 100%;
+        max-width: 400px;
+        height: auto;
+        margin: auto;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+    }
+    #container img {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        transition: transform 0.55s ease-in-out, z-index 0.3s;
+    }
+    #container img:nth-child(1) { grid-column: 1; grid-row: 1; }
+    #container img:nth-child(2) { grid-column: 2; grid-row: 1; }
+    #container img:nth-child(3) { grid-column: 3; grid-row: 1; }
+    #container img:nth-child(4) { grid-column: 1; grid-row: 2; }
+    #container img:nth-child(5) { grid-column: 2; grid-row: 2; }
+    #container img:nth-child(6) { grid-column: 3; grid-row: 2; }
+    #container img:nth-child(7) { grid-column: 1; grid-row: 3; }
+    #container img:nth-child(8) { grid-column: 2; grid-row: 3; }
+    #container img:nth-child(9) { grid-column: 3; grid-row: 3; }
+    #container img:hover {
+        transform: scale(1.2);
+        z-index: 10;
+    }
+    #bottom {
+        margin-top: 160px;
+    }
+}
+
+    </style>
+</head>
+<body>
+    {% include 'header.html' %}
+    </section>
+    <section>
+        <div class="container col-xxl-8 px-4 py-5">
+            <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+              <div class="col-10 col-sm-8 col-lg-6" id="container">
+                <img src="https://lastfm.freetls.fastly.net/i/u/500x500/7017c94ef74a476838e751b0cee1f014.jpg" alt="Image 1">
+                <img src="https://lastfm.freetls.fastly.net/i/u/500x500/c249487733dc732530ad681ffdd9b50d.jpg" alt="Image 2">
+                <img src="https://lastfm.freetls.fastly.net/i/u/500x500/90b54d4d4658b8215a5fcd3cf00072d7.jpg" alt="Image 3">
+                <img src="https://lastfm.freetls.fastly.net/i/u/500x500/7ebd8b6f8ac6766fb26303245a265a2e.jpg" alt="Image 4">
+                <img src="https://lastfm.freetls.fastly.net/i/u/500x500/f579e414e20f40969185e41182d72472.jpg" alt="Image 5">
+                <img src="https://lastfm.freetls.fastly.net/i/u/avatar300s/a4bbf73ba62024be279364e867b0ca20.jpg" alt="Image 6">
+                <img src="https://lastfm.freetls.fastly.net/i/u/500x500/931b66df2652b311fb1078ac189a2e96.jpg" alt="Image 7">
+                <img src="https://lastfm.freetls.fastly.net/i/u/500x500/e8e096ff83f840b67d3427275a227f4e.jpg" alt="Image 8">
+                <img src="https://lastfm.freetls.fastly.net/i/u/500x500/eb300e3afe470b74b4384b169b96dd56.jpg" alt="Image 9">
+              </div>
+              <div id="usuario" class="col-lg-6 custom-div">
+                <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3" style="margin-top: 50px;">Recommend.FM</h1>
+                <p style="margin-top: 20px;">Get fresh music recommendations tailored just for you! Explore new tunes based on your unique preferences and discover your next favorite artist or album. Enjoy a personalized listening experience!</p>
+
+                <form method="post" action="/send">
+                    <div class="mb-3">
+                        <input type="text" class="form-control" id="lastFmUsername" aria-describedby="usernameHelp" name="user" placeholder="last.fm username" required>
+                        <div class="d-grid d-md-flex justify-content-md-end">
+                            {% if not user %}
+                            <p style="color: red; margin-right: 310px !important;">{{ message }}</p>
+                            {% endif %}
+                            <button id="sendbutton" type="submit" class="btn btn-light ">Submit</button>
+                        </div>
+                    </div>
+                </form>               
+              </div>
+            </div>
+          </div>
+    </section>
+
+    <section>
+        {% include 'footer.html' %}
+    </section>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <style>
+        .card-cover {
+            background-size: cover;
+            background-position: center;
+            height: 500px !important;
+        }
+        .little-text {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        .little-text h1 {
+            margin-top: 20px;
+        }
+        .little-text p {
+            padding: 20px;
+            max-width: 600px;
+        }
+        .text-shadow-1 {
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+        }
+        .display-5 {
+            font-size: 3rem; /* Increase the font size */
+        }
+        .fetch-img{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+        }
+    </style>
+</head>
+<body>
+    <section>
+        {% include 'header.html' %}
+    </section>
+    <section>
+        <div class="little-text">
+            <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3">Welcome!</h1>
+            
+            <p>
+                Hello, i hope you liked it! I am truly thankful for your visit and support. Music has always been a significant part of my life, and this project is a labor of love that I am excited to share with you.<br><br>
+                All the code for this site is available on my GitHub repository, which you can find linked in the footer below. I believe in transparency and sharing knowledge, and I hope that my code can help or inspire you in your own projects.<br><br>
+                If you ever need to get in touch with me, feel free to use the contact links provided in the footer. Whether it's feedback, questions, or just a friendly hello, I am always happy to hear from you. You can also reach me directly via email at danielvictorcarneiro21@gmail.com.<br><br>
+                Once again, thank you for stopping by. I hope you find something here that resonates with you. Music brings us all together, and I'm grateful to be able to share my passion with you.<br><br>
+                Best regards,<br>
+                Daniel Victor
+            </p>
+            <div class="fetch-img">
+                <img src="https://lastfm.freetls.fastly.net/i/u/500x500/a4bbf73ba62024be279364e867b0ca20.jpg">
+                <img src="https://lastfm.freetls.fastly.net/i/u/500x500/90b54d4d4658b8215a5fcd3cf00072d7.jpg">
+            </div>
+            <p>👆 My favourites albums by now if you want to know 👆</p>
+            </div>
+    </section>
+    <section>
+        {% include 'footer.html' %}
+    </section>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>

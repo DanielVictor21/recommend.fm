@@ -1,0 +1,143 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #181818;
+    color: white;
+    margin: 0;
+    padding: 0;
+}
+
+h1{
+    padding-bottom: 10px;
+    padding-top: 8px;
+}
+.container {
+    margin: 0 auto; /* Centraliza o container */
+    max-width: 1500px; /* Define um limite de largura para o container */
+}
+
+.main-content {
+    display: flex;
+    gap: 150px; /* Espaçamento entre a seção de perfil e as seções de artistas/álbuns */
+}
+
+.profile-section {
+    text-align: center;
+    flex: 1; /* Faz a seção de perfil ocupar o espaço necessário */
+}
+
+.sections {
+    flex: 5; /* Faz as seções de artistas/álbuns ocuparem o restante do espaço */
+    display: flex;
+    flex-direction: column;
+    gap: 50px; /* Tente um valor menor para o gap */
+    align-items: flex-start; /* Alinha os itens ao início do contêiner */
+    justify-content: flex-start; /* Garante que os itens comecem a partir do topo */
+}
+
+.profile-section img {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+.profile-section p {
+    font-size: 18px;
+}
+
+input[type="text"] {
+    background-color: #2c2c2c;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    padding: 10px;
+    margin-right: 10px;
+}
+
+button {
+    background-color: #444;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #555;
+}
+
+h2 {
+    font-size: 24px;
+    text-align: left; /* Alinha o título à esquerda */
+    margin-bottom: 20px;
+    padding: 10px;
+}
+
+.artists-section, .albums-section {
+    margin-bottom: 40px;
+}
+
+.artists, .albums {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Centraliza os itens */
+    gap: 20px;
+}
+
+.artist, .album {
+    text-align: center;
+    width: 150px;
+}
+
+.artist img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%; /* Torna as imagens dos artistas redondas */
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+.album img {
+    width: 150px;
+    height: 150px;
+    border-radius: 0; /* Torna as imagens dos álbuns quadradas */
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+.artist p, .album p {
+    word-wrap: break-word; /* Quebra as palavras longas para caberem no limite de largura */
+    font-size: 20px; /* Ajusta o tamanho da fonte */
+}
+
+@media (max-width: 768px) {
+    .main-content {
+        flex-direction: column; /* Altera a direção do layout para coluna em telas menores */
+        align-items: center;
+    }
+
+    .artist img, .album img {
+        width: 100px;
+        height: 100px;
+    }
+
+    .artist, .album {
+        width: 100px; /* Ajusta a largura para dispositivos menores */
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+    input[type="text"], button {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .profile-section img {
+        width: 100px;
+        height: 100px;
+    }
+}
